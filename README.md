@@ -1,2 +1,2 @@
 # JSeTS_FullStack
-Exercises
+Exercises and practice: Javascript, Typescript, nodeJS, Express, noSQL, React, hooks, Redux, Design Patterns
