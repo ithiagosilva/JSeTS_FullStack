@@ -16,7 +16,7 @@
                     <th>Resultado</th>
                 </tr>
                 <tr>
-                    <td>Menos do que 18,5</td>
+                    <td>Menor que 18,5</td>
                     <td>Abaixo do peso</td>
                 </tr>
                 <tr>
@@ -36,7 +36,7 @@
                     <td>Obesidade grau 2</td>
                 </tr>
                 <tr>
-                    <td>Mais do que 40</td>
+                    <td>Maior que 40</td>
                     <td>Obesidade grau 3</td>
                 </tr>
             </table>
@@ -45,10 +45,10 @@
         <section class="container-imc-input">
             <h1 class="title">Calcule seu IMC</h1>
             <form id="forms" novalidate>
-                <label for="peso">Peso: </label><br>
-                <input type="text" name="peso" id="peso" placeholder="Digite seu peso (kg)" pattern="[0-9]{2,3}" autofocus><br>
-                <label for="altura">Altura: </label><br>
-                <input type="text" name="altura" id="altura" placeholder="Digite sua altura (cm)" pattern="[0-9]{2,3}"><br>
+                <label for="peso">Peso: <small>(kg)</small></label><br>
+                <input type="text" name="peso" id="peso" placeholder="Digite seu peso (kg)" pattern="[0-9]{2,3}" autocomplete="off" autofocus><br>
+                <label for="altura">Altura: <small>(cm)</small></label><br>
+                <input type="text" name="altura" id="altura" placeholder="Digite sua altura (cm)" pattern="[0-9]{2,3}" autocomplete="off"><br>
                 <button type="submit" id="calc">Calcular</button>
             </form>
             <div class="container-resultado">

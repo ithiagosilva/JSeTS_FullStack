@@ -4,6 +4,7 @@ let altura = document.getElementById('altura');
 let calcularBtn = document.getElementById('calc');
 let textoResultado = document.getElementById('text-result');
 let resultado = document.getElementById('resultado');
+
 let imc;
 
 calcularBtn.addEventListener('click', calcularMostrar)
@@ -14,11 +15,27 @@ function calcularMostrar() {
     let calculo;
     let valor;
 
-    //Calculo
-    if (!Number(peso.value) || !Number(altura.value) || (peso.value.length < 2 || peso.value.length > 3 )  || (altura.value.length < 2 || altura.value.length > 3 )) {
-        calculo = 'Você não digitou uma opção válida.';
+    if (peso.value === "" && altura.value === "") {
+        calculo = 'Você não digitou nada.';
         textoResultado.style.color="red";
         valor = '<img src="./emoji.gif" width="100"/>';
+    
+    } else if (!Number(peso.value) || (peso.value.length < 2 || peso.value.length > 3 )) {
+        if (!Number(altura.value) || (altura.value.length < 2 || altura.value.length > 3 )) {
+            textoResultado.style.color="red";
+            valor = '<img src="./emoji.gif" width="100"/>';
+            calculo = 'Ambos os valores são ínvalidos.';
+        } else {
+            calculo = 'Peso ínvalido.';
+            textoResultado.style.color="red";
+            valor = '<img src="./emoji.gif" width="100"/>';
+        }
+
+    } else if (!Number(altura.value) || (altura.value.length < 2 || altura.value.length > 3 )) {
+        textoResultado.style.color="red";
+        valor = '<img src="./emoji.gif" width="100"/>';
+        calculo = 'Aultura ínvalida.';
+
     } else {
         valorPeso = peso.value;
         valorAltura = altura.value;
@@ -58,6 +75,8 @@ forms.addEventListener("submit", stopDefAction);
 function stopDefAction(e) {
     e.preventDefault();
 }
+
+
 
 
 
