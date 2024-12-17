@@ -52,6 +52,10 @@ body {
     gap: 2%;
 }
 
+#pausar {
+    display: none;
+}
+
 button {
     padding: 3% 10%;
     border: none;

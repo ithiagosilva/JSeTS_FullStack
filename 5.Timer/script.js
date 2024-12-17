@@ -42,12 +42,16 @@ iniciar.addEventListener("click", () => {
     }
     isItOn = true;
     timerTag.style.backgroundImage = "linear-gradient(45deg, #453ff8, #22ffc8)";
+    pausar.style.display = "block"
+    iniciar.style.display = "none"
 });
 
 pausar.addEventListener("click", () => {
     pararTimer();
     isItOn = false;
     timerTag.style.backgroundImage = "linear-gradient(45deg,rgb(248, 63, 85),rgb(255, 34, 203))";
+    pausar.style.display = "none"
+    iniciar.style.display = "block"
 });
 
 zerar.addEventListener("click", () => {
@@ -58,4 +62,6 @@ zerar.addEventListener("click", () => {
     pararTimer();
     isItOn = false;
     timerTag.style.backgroundImage = "linear-gradient(45deg,rgb(248, 63, 85),rgb(255, 34, 203))";
+    pausar.style.display = "none"
+    iniciar.style.display = "block"
 });
