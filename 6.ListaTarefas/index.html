@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <main id="app">
+        <section class="container-lista">
+            <h1>Lista de Tarefas</h1>
+            <form action="">
+                <input id="campo-inserir-tarefa" name="campo-inserir-tarefa" type="text" placeholder="Insira uma tarefa" autocomplete="off">
+                <button id="btn-adicionar" type="submit">+</button>
+            </form>
+            <ul class="container-tarefas">
+                
+            </ul>
+        </section>
+    </main>
+    
+    <script src="./script.js" type="text/javascript"></script>
+    <script>
+        let form = document.querySelector('form')
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, #453ff8, #22ffc8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+#app {
+    min-height: 500px; width: 80%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.container-lista {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+}
+
+
+.container-lista h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    background-image: linear-gradient(45deg, #453ff8, #22ffc8);
+    color: transparent;
+    background-clip: text;
+}
+
+.container-lista h2 {
+    background-image: linear-gradient(45deg, #453ff8, #22ffc8);
+    color: transparent;
+    background-clip: text;
+    font-size: 5rem;
+}
+
+.container-tarefas {
+    width: 100%;
+}
+
+.container-tarefas li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+
+input {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: 2px solid #453ff8;
+}
+
+button {
+    padding: 1% 5%;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg, #453ff8, #22ffc8);
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:active {
+    background: linear-gradient(90deg, #453ff8, #22ffc8);
+}
+
+
+@media only screen and (max-width: 500px) {
+    #app {
+        height: 100vh; width: 100%;
+        border-radius: unset;
+    }
+}
