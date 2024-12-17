@@ -47,7 +47,11 @@ function carregarTarefas() {
         criaTarefa(tarefasJSONConv[i]);
     }
 };
-carregarTarefas();
+
+if (localStorage.getItem('tarefas')) {
+    carregarTarefas();
+}
+
 
 function removerMsg() {
     if (containerLista.lastChild === msg) {
